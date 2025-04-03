@@ -1,10 +1,10 @@
- lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Up Game</title>
     <style>
-    {
+    body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: silver;
     color: #000;
@@ -275,5 +275,3 @@ function beliProduk(game, jumlahDM, nomorTujuan) {
     window.open(url, '_blank');
 }
 </script>
-</body>
-</html>
