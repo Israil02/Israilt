@@ -4,274 +4,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Up Game</title>
     <style>
-    body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: silver;
-    color: #000;
-    margin: 20px auto;
-    text-align: center;
-    max-width: 1200px;
-    padding: 0 20px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #3498db;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-    font-size: 24px;
-    color: #FFFF00;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 40px;
-}
-.game-title {
-    color: #3498db; /* biru */
-}
-
-.price-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.price-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    width: 200px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: float 3s infinite ease-in-out;
-    text-align: center;
-}
-
-.price-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.price-item h3 {
-    margin-top: 0;
-    color: #f1c40f;
-    font-size: 20px;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-}
-
-.price-item p {
-    color: #f1c40f; 
-    font-size: 16px;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
-}
-
-.whatsapp-link {
-    text-decoration: none;
-    color: #fff;
-    background-color: #27ae60; 
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.whatsapp-link:hover {
-    background-color: #219653; 
-    transform: translateY(-3px);
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-.price-item input,
-.whatsapp-link {
-    margin-top: 10px;
-}
-
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 40px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-size: 28px;
+            color: #f1c40f;
+            margin-top: 40px;
+        }
+        .price-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .price-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            width: 220px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            animation: float 3s infinite ease-in-out;
+        }
+        .price-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+        .whatsapp-link {
+            text-decoration: none;
+            color: white;
+            background: #27ae60;
+            padding: 12px 18px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .whatsapp-link:hover {
+            background: #219653;
+            transform: scale(1.05);
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
+
 <h1>Top Up Game</h1>
+
 <h2>Free Fire</h2>
-<div class="price-container">
-    <div class="price-item">
-        Level Up Pass: Rp. 20.000 
-        <input type="text" id="nomorTujuanFFLevelUpPass" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 'Level Up Pass', document.getElementById('nomorTujuanFFLevelUpPass').value)" class="whatsapp-link">Beli</a>
-    </div>
-<div class="price-container">
-    <div class="price-item">
-        5 DM: Rp. 2.000 
-        <input type="text" id="nomorTujuanFF5" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 5, document.getElementById('nomorTujuanFF5').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        15 DM: Rp. 5.000 
-        <input type="text" id="nomorTujuanFF15" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 15, document.getElementById('nomorTujuanFF15').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        50 DM: Rp. 10.000 
-        <input type="text" id="nomorTujuanFF50" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 50, document.getElementById('nomorTujuanFF50').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        80 DM: Rp. 15.000 
-        <input type="text" id="nomorTujuanFF80" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 80, document.getElementById('nomorTujuanFF80').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        100 DM: Rp. 20.000 
-        <input type="text" id="nomorTujuanFF100" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 100, document.getElementById('nomorTujuanFF100').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        140 DM: Rp. 25.000 
-        <input type="text" id="nomorTujuanFF140" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 140, document.getElementById('nomorTujuanFF140').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        200 DM: Rp. 32.000 
-        <input type="text" id="nomorTujuanFF200" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 200, document.getElementById('nomorTujuanFF200').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        250 DM: Rp. 39.000 
-        <input type="text" id="nomorTujuanFF250" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 250, document.getElementById('nomorTujuanFF250').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        300 DM: Rp. 45.000 
-        <input type="text" id="nomorTujuanFF300" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 300, document.getElementById('nomorTujuanFF300').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        350 DM: Rp. 50.000 
-        <input type="text" id="nomorTujuanFF350" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 350, document.getElementById('nomorTujuanFF350').value)" class="whatsapp-link">Beli</a>
-    </div>
-     <div class="price-item">
-        400 DM: Rp. 58.000 
-        <input type="text" id="nomorTujuanFF400" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 400, document.getElementById('nomorTujuanFF400').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        500 DM: Rp. 76.000 
-        <input type="text" id="nomorTujuanFF500" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 500, document.getElementById('nomorTujuanFF500').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        720 DM: Rp. 96.000 
-        <input type="text" id="nomorTujuanFF720" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 720, document.getElementById('nomorTujuanFF720').value)" class="whatsapp-link">Beli</a>
-    </div>
-        <div class="price-item">
-        1000 DM: Rp. 137.000 
-        <input type="text" id="nomorTujuanFF1000" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 1000, document.getElementById('nomorTujuanFF1000').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        Membership Mingguan: Rp. 35.000 
-        <input type="text" id="nomorTujuanFFMembershipMingguan" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 'Membership Mingguan', document.getElementById('nomorTujuanFFMembershipMingguan').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        Membership Bulanan: Rp. 95.000 
-        <input type="text" id="nomorTujuanFFMembershipBulanan" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Free Fire', 'Membership Bulanan', document.getElementById('nomorTujuanFFMembershipBulanan').value)" class="whatsapp-link">Beli</a>
-    </div>
-</div>
+<div class="price-container" id="freeFireContainer"></div>
+
 <h2>Mobile Legends</h2>
-<div class="price-container">
-    <div class="price-item">
-        5 DM: Rp. 3.000 
-        <input type="text" id="nomorTujuanML5" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 5, document.getElementById('nomorTujuanML5').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        12 DM: Rp. 5.000 
-        <input type="text" id="nomorTujuanML12" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 12, document.getElementById('nomorTujuanML12').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        28 DM: Rp. 11.000 
-        <input type="text" id="nomorTujuanML28" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 28, document.getElementById('nomorTujuanML28').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        36 DM: Rp. 14.000 
-        <input type="text" id="nomorTujuanML36" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 36, document.getElementById('nomorTujuanML36').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        44 DM: Rp. 16.000 
-        <input type="text" id="nomorTujuanML44" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 44, document.getElementById('nomorTujuanML44').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        75 DM: Rp. 24.000 
-        <input type="text" id="nomorTujuanML75" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 75, document.getElementById('nomorTujuanML75').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        86 DM: Rp. 27.000 
-        <input type="text" id="nomorTujuanML86" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 86, document.getElementById('nomorTujuanML86').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        172 DM: Rp. 50.000 
-        <input type="text" id="nomorTujuanML172" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 172, document.getElementById('nomorTujuanML172').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        240 DM: Rp. 67.000 
-        <input type="text" id="nomorTujuanML240" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 240, document.getElementById('nomorTujuanML240').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        250 DM: Rp. 38.000 
-        <input type="text" id="nomorTujuanML250" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 250, document.getElementById('nomorTujuanML250').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        296 DM: Rp. 82.000 
-        <input type="text" id="nomorTujuanML296" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 296, document.getElementById('nomorTujuanML296').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        370 DM: Rp. 102.000 
-        <input type="text" id="nomorTujuanML370" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 370, document.getElementById('nomorTujuanML370').value)" class="whatsapp-link">Beli</a>
-    </div>
-    <div class="price-item">
-        Weekly DM Pass: Rp. 40.000 
-        <input type="text" id="nomorTujuanMLWeekly" placeholder="Nomor tujuan">
-        <a href="#" onclick="beliProduk('Mobile Legends', 'Weekly DM Pass', document.getElementById('nomorTujuanMLWeekly').value)" class="whatsapp-link">Beli</a>
-    </div>
-</div>
+<div class="price-container" id="mlContainer"></div>
+
 <script>
-function beliProduk(game, jumlahDM, nomorTujuan) {
- 
-    console.log(`Membeli ${jumlahDM} DM di ${game} untuk nomor tujuan ${nomorTujuan}`);
-    
-    var nomorWhatsApp = '6282245184223';
-    var pesan = encodeURIComponent(`Halo, saya tertarik untuk membeli ${jumlahDM} DM di ${game}. Mohon dibantu prosesnya.`);
-    var url = `https://wa.me/${nomorWhatsApp}?text=${pesan}%20-%20Nomor%20tujuan%3A%20${nomorTujuan}`;
-    window.open(url, '_blank');
-}
+    const produk = {
+        'Free Fire': [
+            ['Level Up Pass', 20000], [5, 2000], [15, 5000], [50, 10000], [80, 15000],
+            [100, 20.000], [140, 24000], [200, 32000], [250, 39000], [300, 45000],[350,50000],[400,58000], [500,76.000], [720,96000],[1000,137000],['Membership Mingguan',35000], ['Membership Bulanan', 95000]
+        ],
+        'Mobile Legends': [
+            [5, 3000], [12, 5000], [28, 13000], [36, 15000], [44, 17000], [74, 25000],[86,28000],[172,54000],[222,65000],[370,108000],[568,157000],['Weekly Diamond Pass',34000]
+        ]
+    };
+
+    function buatProduk(game, containerId) {
+        const container = document.getElementById(containerId);
+        produk[game].forEach(([nama, harga]) => {
+            let item = document.createElement('div');
+            item.className = 'price-item';
+            item.innerHTML = `
+                <strong>${nama} DM</strong>: Rp. ${harga}
+                <input type="text" id="nomorTujuan${game.replace(/\s+/g, '')}${nama}" placeholder="Nomor tujuan">
+                <a href="#" onclick="beliProduk('${game}', '${nama}', document.getElementById('nomorTujuan${game.replace(/\s+/g, '')}${nama}').value)" class="whatsapp-link">Beli</a>
+            `;
+            container.appendChild(item);
+        });
+    }
+
+    function beliProduk(game, jumlahDM, nomorTujuan) {
+        let nomorWhatsApp = '6282245184223';
+        let pesan = encodeURIComponent(`Halo, saya ingin membeli ${jumlahDM} DM untuk ${game}. Nomor tujuan: ${nomorTujuan}.`);
+        window.open(`https://wa.me/${nomorWhatsApp}?text=${pesan}`, '_blank');
+    }
+
+    buatProduk('Free Fire', 'freeFireContainer');
+    buatProduk('Mobile Legends', 'mlContainer');
 </script>
+
+</body>
+</html>
